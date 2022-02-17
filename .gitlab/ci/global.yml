@@ -22,7 +22,7 @@
   - cp $PIP_CONF /etc/pip.conf
   - update-ca-certificates > /dev/null
   - git config --global http.sslCAInfo /usr/local/share/ca-certificates/domain-ca.crt
-  - export NODE_EXTRA_CA_CERTS=$"REQUESTS_CA_BUNDLE"
+  - export NODE_EXTRA_CA_CERTS=$REQUESTS_CA_BUNDLE
   - section_end "Setup network certs"
 
 
