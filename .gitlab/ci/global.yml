@@ -20,7 +20,6 @@
   - cp $DOMAIN_CA /usr/local/share/ca-certificates/domain-ca.crt
   - cp $PIP_CONF /etc/pip.conf
   - update-ca-certificates > /dev/null
-  - gcloud config set core/custom_ca_certs_file /usr/local/share/ca-certificates/domain-ca.crt
   - git config --global http.sslCAInfo /usr/local/share/ca-certificates/domain-ca.crt
   - export NODE_EXTRA_CA_CERTS=$INTERNAL_CA
   - section_end "Setup network certs"
