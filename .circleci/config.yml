@@ -71,7 +71,7 @@ parameters:
     default: ""
   sdk_ref:
     type: string
-    default: "update-linters-py310"
+    default: "master"
   gcs_market_bucket:
     type: string
     default: "marketplace-dist"
