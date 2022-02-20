@@ -474,6 +474,13 @@ def main() -> None:
             'api-key': demisto.params().get('credentials', {}).get('password'),
             'User-Agent': 'Falcon Sandbox'
         }
+        match demisto_command:
+            case 'a':
+                print()
+            case 'w':
+                pass
+            case _:
+                pass
 
         client = Client(
             base_url=SERVER_URL,
