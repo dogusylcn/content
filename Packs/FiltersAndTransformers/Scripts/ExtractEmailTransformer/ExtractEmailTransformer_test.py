@@ -12,6 +12,7 @@ data_test_main = [
 @pytest.mark.parametrize('args, command_outputs', data_test_main)
 def test_main(args, command_outputs, mocker):
     mocker.patch.object(demisto, 'args', return_value=args)
+
     mocker.patch('ExtractEmailTransformer.execute_command', return_value=command_outputs)
     results_mocker = mocker.patch('ExtractEmailTransformer.return_results')
     main()
