@@ -16,13 +16,13 @@
 .setup-network-certs: &setup-network-certs
   - source .gitlab/helper_functions.sh
   - section_start "Setup network certs" --collapsed
-  - export REQUESTS_CA_BUNDLE="/usr/local/share/ca-certificates/internal-ca.crt"
-  - cp $INTERNAL_CA $REQUESTS_CA_BUNDLE
+  - cp $INTERNAL_CA /usr/local/share/ca-certificates/internal-ca.crt
   - cp $DOMAIN_CA /usr/local/share/ca-certificates/domain-ca.crt
   - cp $PIP_CONF /etc/pip.conf
   - update-ca-certificates > /dev/null
+  - gcloud config set core/custom_ca_certs_file /usr/local/share/ca-certificates/domain-ca.crt
   - git config --global http.sslCAInfo /usr/local/share/ca-certificates/domain-ca.crt
-  - export NODE_EXTRA_CA_CERTS=$REQUESTS_CA_BUNDLE
+  - export NODE_EXTRA_CA_CERTS=$INTERNAL_CA
   - section_end "Setup network certs"
 
 
