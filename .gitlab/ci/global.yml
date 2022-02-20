@@ -36,7 +36,7 @@
 
 .open-ssh-tunnel:
   - section_start "Open SSH Tunnel" --collapsed
-  - cat $SSH_CONFIGURATION >> ~/.ssh/config
+  - cat $TEMP_SSH_CONFIGURATION >> ~/.ssh/config
   - chmod 700 ~/.ssh/config
   - ./Tests/scripts/open_ssh_tunnel.sh
   - section_end "Open SSH Tunnel"
