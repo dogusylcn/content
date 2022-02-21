@@ -112,7 +112,7 @@ else
             echo "ERROR: python3 is missing. Please make sure you have Python 3 installed on your system" 1>&2
             exit 1
         fi
-        echo "Using python 3 command: `command -v $PY3CMD`. Non 3.10 command $PY3CMD_NO_10"
+        echo "Using python 3 command: `command -v $PY3CMD`. Non 3.10 command `command -v $PY3CMD_NO_10`"
         if ! $PY3CMD -c 'import sys;assert sys.version_info.major == 3 and sys.version_info.minor >= 7, "python version check failed for: {}".format(sys.version_info)'; then
             echo "ERROR: python 3.7 or above version validation failed. Please make sure you have Python 3.7 (and above) installed on your system" 1>&2
             exit 1
