@@ -128,8 +128,8 @@ else
         fi
         echo "install python 3 deps"
         ls venv/bin
-        venv/bin/python3 --version
-        venv/bin/python3 -m python3-pip install -r dev-requirements-py3.txt -U --upgrade-strategy only-if-needed
+        venv/bin/python3.10 --version
+        venv/bin/python3.10 -m pip3.10 install -r dev-requirements-py3.txt -U --upgrade-strategy only-if-needed
         if [ "$INCLUDE_PY2_NOTE" == "yes" ]; then
             echo "=========================="
             echo "Note: python 2 is NOT setup. If you require python 2 for your scripts/integrations run this command again"
