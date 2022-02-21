@@ -126,6 +126,7 @@ else
         if [ "$SETUP_PY2" == "yes" ]; then
             venv/bin/pip2 install -r dev-requirements-py2.txt
         fi
+        echo "install python 3 deps"
         venv/bin/python3 -m pip install -r dev-requirements-py3.txt -U --upgrade-strategy only-if-needed
         if [ "$INCLUDE_PY2_NOTE" == "yes" ]; then
             echo "=========================="
