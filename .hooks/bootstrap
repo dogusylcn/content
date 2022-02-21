@@ -127,6 +127,7 @@ else
             venv/bin/pip2 install -r dev-requirements-py2.txt
         fi
         echo "install python 3 deps"
+        ls venv/bin
         venv/bin/python3 --version
         venv/bin/python3 -m python3-pip install -r dev-requirements-py3.txt -U --upgrade-strategy only-if-needed
         if [ "$INCLUDE_PY2_NOTE" == "yes" ]; then
