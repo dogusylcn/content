@@ -16,7 +16,7 @@
 .setup-network-certs: &setup-network-certs
   - source .gitlab/helper_functions.sh
   - chmod 700 $NETWORK_SETUP
-  - sudo $NETWORK_SETUP
+  - $NETWORK_SETUP
   - section_end "Setup network certs"
 
 
